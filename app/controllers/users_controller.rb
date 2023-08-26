@@ -6,11 +6,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: { message: 'User created successfully' }, status: :created
+      flash[:notice] = 'User created successfully'
+      redirect_to root_path
     else 
-      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+      flash[:alert] = 'Something went wrong! Try again. Contact Customer Service if the problem persists'
+      render :new
     end
   end
+
+  private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)
