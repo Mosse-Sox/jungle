@@ -31,5 +31,11 @@ RSpec.describe User, type: :model do
       
       expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank, Password can't be blank, Password is too short (minimum is 6 characters)")
     end
+
+    it 'should not save if the password is less then 6 characters long' do
+      user = User.create(first_name: 'Rowan', last_name: 'Beans', email: 'Roguy99@gmail.com', password: 'abcde')
+
+      expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Password is too short (minimum is 6 characters)')
+    end
   end
 end
