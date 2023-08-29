@@ -19,5 +19,17 @@ RSpec.describe User, type: :model do
       
       expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Last name can't be blank")
     end
+
+    it 'should not save if the email field is nil' do
+      user = User.create(first_name: 'Rowan', last_name: 'Beans', email: nil, password: 'BeefBurrito')
+      
+      expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Email can't be blank")
+    end
+
+    it 'should not save if the password field is nil' do
+      user = User.create(first_name: 'Rowan', last_name: 'Beans', email: 'Roguy99@gmail.ca', password: nil)
+      
+      expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank, Password can't be blank, Password is too short (minimum is 6 characters)")
+    end
   end
 end
