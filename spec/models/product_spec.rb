@@ -10,6 +10,7 @@ RSpec.describe Product, type: :model do
       expect{ product.save! }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Name can't be blank")
     end
 
+    # it actually does save, but it sets the price to zero - not 100% sure where that is happening or why
     it 'should not save if the price field is nil' do
       category = Category.create(name: 'Sample Category')
       product = Product.new(name: 'Bean', price: nil, quantity: 50, category: category)
