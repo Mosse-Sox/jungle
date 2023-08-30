@@ -5,7 +5,37 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 ## Preview 
     
 - Home Page 
-    ![Home page, big header]()
+    ![Home page, big header](https://github.com/Mosse-Sox/jungle/blob/master/public/images/homepage.png?raw=true)
+  
+    ![Home page, products and nav](https://github.com/Mosse-Sox/jungle/blob/master/public/images/homepage2.png?raw=true)
+
+<br>
+
+-  Product Details Page 
+    ![products detail page](https://github.com/Mosse-Sox/jungle/blob/master/public/images/product_details_page.png?raw=true)
+
+
+<br>
+
+- Register  
+    ![registration page](https://github.com/Mosse-Sox/jungle/blob/master/public/images/register.png?raw=true)
+
+
+<br>
+
+- Login  
+    ![login page](https://github.com/Mosse-Sox/jungle/blob/master/public/images/login.png?raw=true)
+
+
+<br>
+
+- Http Auth For Admin Pages  
+    ![example http auth for admin](https://github.com/Mosse-Sox/jungle/blob/master/public/images/http_auth_for_admin.png?raw=true)
+
+<br>
+
+- Admin Page Example  
+    ![example of an admin page](https://github.com/Mosse-Sox/jungle/blob/master/public/images/admin_pages.png?raw=true)
 
 ## Setup
 
