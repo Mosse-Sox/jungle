@@ -11,7 +11,7 @@ describe("Product Details Page", () => {
   });
 
   it("A user should be able to add the product to their carts from the product details page", () => {
-    cy.get(".btn").contains(" Add ").should("exist").click();
+    cy.get(".btn").contains("Add").should("exist").click();
     cy.wait(5000);
     cy.get(".nav-link").contains("My Cart (1)");
   });
